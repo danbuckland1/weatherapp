@@ -23,14 +23,24 @@ class App extends React.Component {
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}&units=imperial`
     );
     const data = await api_call.json();
-    console.log(data);
-    this.setState({
-      temperature: data.main.temperature,
-      city: data.name,
-      humidity: data.main.humidity,
-      description: data.weather[0].description,
-      error: ""
-    });
+    if (city) {
+      console.log(data);
+      this.setState({
+        temperature: data.main.temp,
+        city: data.name,
+        humidity: data.main.humidity,
+        description: data.weather[0].description,
+        error: ""
+      });
+    } else {
+      this.setState({
+        temperature: undefined,
+        city: undefined,
+        humidity: undefined,
+        description: undefined,
+        error: "Please enter a city"
+      });
+    }
   };
 
   render() {
