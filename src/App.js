@@ -4,6 +4,7 @@ import Weather from "./components/Weather";
 
 const API_KEY = "36dbbff2a2e5a9bebe554ceb74148e4f";
 
+
 class App extends React.Component {
   state = {
     temperature: undefined,
@@ -16,7 +17,6 @@ class App extends React.Component {
   getWeather = async e => {
     e.preventDefault();
     const city = e.target.elements.city.value;
-    // const country = e.target.elements.country.value;
     const api_call = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}&units=imperial`
     );
@@ -41,6 +41,7 @@ class App extends React.Component {
         error: "Please enter a city"
       });
     }
+    
     console.log(data);
   };
 
