@@ -8,7 +8,7 @@ body {
 }
 
 form {
-  margin-left: 100px;
+  margin-left: 40px;
   padding-top: 20px;
 }
 
@@ -76,6 +76,12 @@ input:focus{
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
   color: #ecedf7;
+}
+
+@media(min-width: 700px){
+  body {
+    display:none;
+  }
 }
 
 /* input {
