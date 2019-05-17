@@ -1,10 +1,9 @@
-import React  from "react";
+import React from "react";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 import Title from "./components/Title";
 
 const API_KEY = "36dbbff2a2e5a9bebe554ceb74148e4f";
-
 
 class App extends React.Component {
   state = {
@@ -42,7 +41,7 @@ class App extends React.Component {
         error: "Please enter a city"
       });
     }
-    
+
     console.log(data);
   };
 
