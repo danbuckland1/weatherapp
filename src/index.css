@@ -9,10 +9,21 @@ body {
 
 form {
   margin-left: 40px;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
+h1 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: whitesmoke;
+  text-shadow: 2px 2px silver;
+
+}
+
+
 button {
+  background-color: white;
+  color: lightslategray;
   margin-left: 60px;
   border-radius: 5px;
   padding: 10px 50px;
@@ -30,7 +41,7 @@ button:hover {
 
 button:active{
   box-shadow: 0 3px 10px;
-  top: 3px;
+  top: 4px;
   outline: none;
 }
 
